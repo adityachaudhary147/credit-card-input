@@ -14,8 +14,9 @@ export const CardInput=()=>{
         
         const val=e.target.value;
         const len=val.length;
+
         
-        if(len== 4 || len==9 || len== 14)
+        if(isNumber(val[len-1])==true && (len== 4 || len==9 || len== 14))
         {
             setState({cardNumber:val+'-'});
         }
@@ -28,7 +29,11 @@ export const CardInput=()=>{
                 return;
             }
             else{
-                
+                if(len==5 || len==10 || len==15)
+                {
+                    setState({cardNumber:val});
+                return;
+                }
                 setState({cardNumber:val.slice(0,-1)})
                 
                 return;
@@ -38,13 +43,17 @@ export const CardInput=()=>{
     }
     function captureDelete(e)
     {
-        // e.preventDefault();
+        
        
         const curr=state.cardNumber.length;
+        
+       
         if(curr ===5 || curr === 10|| curr ===15 )
             {
+                console.log(curr);
                 if(e.keyCode==8)
                 {
+                    // e.preventDefault();
                 setState((val)=>{
                     return {cardNumber:val.cardNumber.slice(0,-1)}
                 });
