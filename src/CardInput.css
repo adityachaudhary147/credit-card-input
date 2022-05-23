@@ -1,0 +1,37 @@
+
+.card-box{
+    width: 500px;
+    margin: auto;
+    background-color: whitesmoke;
+    border: solid white 2px;
+    border-radius: 15px;
+    padding: 25px;
+}
+.container-input{
+    margin-top: 60px;
+    margin-left: 20px;
+    margin-right: 140px;
+    border: solid #00B9f1 1px;
+    border-radius: 10px;
+    display: flex;
+    padding: 5px;
+    box-shadow: 0 0 10px #00B9f1;
+    width: 200px;
+    padding: 8px;
+    background-color: white;
+}
+.card-input-box{
+    width: 150px;
+    letter-spacing: 2.2px;
+}
+.container-input input{
+    border:none;
+    background-color: white;
+
+}
+.container-input input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+.card-digits{
+    margin-left: 3px ;
+}
